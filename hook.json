@@ -1,0 +1,38 @@
+[
+    {
+        "id": "paymentfintech-redeploy",
+        "execute-command": "/www/wwwroot/payment.fintech.ovh/redeploy.sh",
+        "command-working-directory": "/www/wwwroot/payment.fintech.ovh/",
+        "http-methods": ["POST"],
+        "pass-arguments-to-command":
+        [
+            {
+                "source": "payload",
+                "name": "head_commit.id"
+            },
+            {
+                "source": "payload",
+                "name": "pusher.name"
+            },
+            {
+                "source": "payload",
+                "name": "pusher.email"
+            }
+        ],
+        "trigger-rule": {
+            "and": [
+                {
+                    "match": {
+                        "type": "payload-hmac-sha1",
+                        "secret": "mysecret",
+                        "parameter":
+                        {
+                            "source": "header",
+                            "name": "X-Hub-Signature"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]
