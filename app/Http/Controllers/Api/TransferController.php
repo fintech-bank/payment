@@ -9,6 +9,12 @@ class TransferController extends Controller
 {
     public function call(Request $request)
     {
-        dd($request->all(), "OK");
+        $rand = rand(0,1);
+
+        if($rand == 1) {
+            return response()->json(null, 201);
+        } else {
+            return response()->json(null, 500);
+        }
     }
 }
