@@ -9,6 +9,6 @@ class TransferController extends Controller
 {
     public function call(Request $request)
     {
-        dd($request->all());
+        dd($request->all(), "OK");
     }
 }
