@@ -31,7 +31,6 @@ class SystemClear extends Command
         $this->call('cache:clear');
         $this->call('config:clear');
         $this->call('event:clear');
-        $this->call('log-viewer:clear');
         $this->call('optimize:clear');
         $this->call('queue:clear');
         $this->call('route:clear');
