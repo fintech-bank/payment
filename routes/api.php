@@ -19,5 +19,5 @@ Route::prefix('sepa')->group(function () {
 });
 
 Route::prefix('transfer')->group(function () {
-    Route::post('/call', [\App\Http\Controllers\Api\TransferController::class, 'call']);
+    Route::get('/call', [\App\Http\Controllers\Api\TransferController::class, 'call']);
 });
