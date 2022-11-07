@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('transfer')->group(function () {
+    Route::post('/call', [\App\Http\Controllers\Api\TransferController::class, 'call']);
 });
