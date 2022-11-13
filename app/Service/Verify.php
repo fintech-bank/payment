@@ -9,7 +9,9 @@ class Verify
     public function verifyICS($ics)
     {
         $length = Str::length($ics);
-        $formater = Str::replace("\r\n", " ", chunk_split($ics, 2));
+        $formater = [
+            Str::substr($ics, 0, 2)
+        ];
 
         return $formater;
     }
