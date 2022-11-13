@@ -11,10 +11,9 @@ class Generator extends Tables
         $alphabet = $this->alphabet();
         $numericLanguageCode = '';
 
-        dd(Str::ucsplit($country));
 
         foreach (Str::ucsplit($country) as $char) {
-            $numericLanguageCode .= array_search($char, $alphabet) + 9;
+            $numericLanguageCode .= array_search($char, $alphabet);
         }
 
         return $numericLanguageCode.'00';
