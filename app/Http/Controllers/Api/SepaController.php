@@ -13,4 +13,9 @@ class SepaController extends Controller
         $faker = Factory::create('fr_FR');
         return $faker->boolean(rand(50,99));
     }
+
+    public function remb(Request $request)
+    {
+
+    }
 }
