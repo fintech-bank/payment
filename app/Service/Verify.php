@@ -13,6 +13,7 @@ class Verify
             Str::substr($ics, 0, 2),
             Str::substr($ics, 2, 2),
             Str::substr($ics, 4, 3),
+            Str::substr($ics, 7, 6),
         ];
 
         return $formater;
