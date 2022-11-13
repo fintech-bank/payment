@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('transfer')->group(function () {
     Route::get('/call', [\App\Http\Controllers\Api\TransferController::class, 'call']);
 });
+
+Route::prefix('sepa')->group(function () {
+    Route::get('accept', [\App\Http\Controllers\Api\SepaController::class, 'accept']);
+});
+
+Route::prefix('payment')->group(function () {
+
+});
