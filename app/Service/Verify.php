@@ -26,6 +26,7 @@ class Verify extends Tables
 
         // Vérification du pays
 
+        dd($formater['country'], $this->countries());
 
         return array_key_exists($formater['country'], $this->countries());
     }
