@@ -16,6 +16,6 @@ class Generator extends Tables
             $numericLanguageCode .= array_search($char, $alphabet);
         }
 
-        return $numericLanguageCode.'00';
+        return Str::limit($numericLanguageCode, 2, '');
     }
 }
