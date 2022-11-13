@@ -6,6 +6,13 @@ use Illuminate\Support\Str;
 
 class Verify extends Tables
 {
+    private $generator;
+
+    public function __construct()
+    {
+        $this->generator = new Generator();
+    }
+
     public function verifyICS($ics)
     {
         $length = Str::length($ics);
@@ -25,6 +32,14 @@ class Verify extends Tables
         }
 
         // Vérification du pays
+
+        if(array_key_exists($formater['country'], $this->countries())) {
+            $i++;
+        } else {
+            $i--;
+        }
+
+
 
         //dd($formater['country'], $this->countries());
 
