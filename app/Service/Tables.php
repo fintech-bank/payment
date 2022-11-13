@@ -6,6 +6,13 @@ class Tables
 {
     public function countries()
     {
-        return ["FR","US","BL","LU","JP","CH"];
+        return [
+            "FR" => "France",
+            "US" => "Etat-Unis",
+            "BL" => "Belgique",
+            "LU" => "Luxembourg",
+            "JP" => "Japon",
+            "CH" => "Chine",
+        ];
     }
 }
