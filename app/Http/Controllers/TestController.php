@@ -10,6 +10,6 @@ class TestController extends Controller
     public function __invoke()
     {
         $verify = new Verify();
-        return $verify->verifyICS('CH38HMR81338');
+        return $verify->verifyICS('CH38HMR810338');
     }
 }
