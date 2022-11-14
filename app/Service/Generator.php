@@ -21,6 +21,18 @@ class Generator extends Tables
 
     public function icsNNE($icsKey, $activity, $country)
     {
-        return $icsKey.str_pad($activity, 10, '0', STR_PAD_LEFT);
+        $nne = '';
+        $uc_activity = '';
+        $uc_country = '';
+
+        foreach (Str::ucsplit($activity) as $char) {
+            $uc_activity .= array_search($char, $this->alphabet_reverse());
+        }
+
+        foreach (Str::ucsplit($country) as $char) {
+            $uc_country .= array_search($char, $this->alphabet());
+        }
+
+        dd($uc_country, $uc_activity);
     }
 }
