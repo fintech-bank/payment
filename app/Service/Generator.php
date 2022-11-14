@@ -27,7 +27,6 @@ class Generator extends Tables
 
     public function icsNNE($icsKey, $activity, $country)
     {
-        $nne = '';
         $uc_activity = '';
         $uc_country = '';
 
