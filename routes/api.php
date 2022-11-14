@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('sepa')->group(function () {
-
+    Route::get('accept', [\App\Http\Controllers\Api\SepaController::class, 'accept']);
+    Route::post('remb', [\App\Http\Controllers\Api\SepaController::class, 'remb']);
 });
 
 Route::prefix('transfer')->group(function () {
