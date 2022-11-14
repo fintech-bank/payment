@@ -9,7 +9,7 @@ class TestController extends Controller
 {
     public function __invoke()
     {
-        $verify = new Generator();
-        dd($verify->generateICS());
+        $verify = new Verify();
+        dd($verify->verifyICS('CH38HMR81338'));
     }
 }
