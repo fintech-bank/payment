@@ -17,6 +17,7 @@ class SepaController extends Controller
 
     public function remb(Request $request)
     {
+        dd($request->all());
         $verify = new Verify();
         if ($verify->verifyICS($request->ics)) {
             return true;
