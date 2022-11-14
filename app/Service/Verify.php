@@ -60,10 +60,6 @@ class Verify extends Tables
             $i--;
         }
 
-        if($i == 4) {
-            return true;
-        } else {
-            return false;
-        }
+        return $i;
     }
 }
