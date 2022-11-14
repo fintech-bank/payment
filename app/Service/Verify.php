@@ -13,7 +13,7 @@ class Verify extends Tables
         $this->generator = new Generator();
     }
 
-    public function verifyICS($ics): int
+    public function verifyICS($ics)
     {
         $length = Str::length($ics);
         $i = 0;
