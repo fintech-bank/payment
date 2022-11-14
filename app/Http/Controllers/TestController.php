@@ -11,6 +11,6 @@ class TestController extends Controller
     {
         $verify = new Verify();
         $gen = new Generator();
-        dd($verify->verifyICS('BL21FNV614212'), $gen->generateICS());
+        dd($verify->verifyICS('CH38AEH15838'), $gen->generateICS());
     }
 }
