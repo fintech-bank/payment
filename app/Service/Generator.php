@@ -19,6 +19,12 @@ class Generator extends Tables
         return Str::limit($numericLanguageCode, 2, '');
     }
 
+    public function icsActivity()
+    {
+        $first = array_rand($this->alphabet_reverse(), 3);
+        dd($first);
+    }
+
     public function icsNNE($icsKey, $activity, $country)
     {
         $nne = '';
@@ -34,5 +40,14 @@ class Generator extends Tables
         }
 
         return Str::limit($uc_activity, 3, '') . Str::limit($uc_country, 3, '');
+    }
+
+    public function generateICS()
+    {
+        $country = $this->countries();
+
+        $c = array_rand($country);
+        $key = $this->icsKey($c);
+        $act =
     }
 }

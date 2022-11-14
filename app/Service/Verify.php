@@ -54,12 +54,16 @@ class Verify extends Tables
         }
 
         // Vérification du NNE
+        if($this->generator->icsNNE($this->generator->icsKey($formater['country']), $formater['activity'], $formater['country']) == $formater['nne']) {
+            $i++;
+        } else {
+            $i--;
+        }
 
-
-
-
-        //dd($formater['country'], $this->countries());
-
-        return array_key_exists($formater['country'], $this->countries());
+        if($i == 4) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
