@@ -39,6 +39,23 @@ class Verify extends Tables
             $i--;
         }
 
+        // Verification de la clef de control
+        if($formater['key'] == $this->generator->icsKey($formater['country'])) {
+            $i++;
+        } else {
+            $i--;
+        }
+
+        // Vérification du code d'activité
+        if(Str::length($formater['activity']) == 3) {
+            $i++;
+        } else {
+            $i--;
+        }
+
+        // Vérification du NNE
+
+
 
 
         //dd($formater['country'], $this->countries());
