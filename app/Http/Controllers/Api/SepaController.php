@@ -15,7 +15,7 @@ class SepaController extends Controller
         return $faker->boolean(rand(50,99));
     }
 
-    public function remb(Request $request): bool
+    public function remb(Request $request)
     {
         $verify = new Verify();
         if($verify->verifyICS($request->get('ics')) == 5) {
