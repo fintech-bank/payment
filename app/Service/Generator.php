@@ -48,5 +48,9 @@ class Generator extends Tables
 
         $c = array_rand($country);
         $key = $this->icsKey($c);
+        $act = $this->icsActivity();
+        $nne = $this->icsNNE($key, $act, $c);
+
+        dd($c, $key, $act, $nne);
     }
 }

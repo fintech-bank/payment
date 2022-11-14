@@ -10,6 +10,6 @@ class TestController extends Controller
     public function __invoke()
     {
         $verify = new Generator();
-        dd($verify->icsActivity());
+        dd($verify->generateICS());
     }
 }
