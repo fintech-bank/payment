@@ -19,7 +19,7 @@ Route::prefix('transfer')->group(function () {
 
 Route::prefix('sepa')->group(function () {
     Route::get('accept', [\App\Http\Controllers\Api\SepaController::class, 'accept']);
-    Route::get('remb', [\App\Http\Controllers\Api\SepaController::class, 'remb']);
+    Route::post('remb', [\App\Http\Controllers\Api\SepaController::class, 'remb']);
 });
 
 Route::prefix('payment')->group(function () {
