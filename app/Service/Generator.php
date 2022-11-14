@@ -22,7 +22,7 @@ class Generator extends Tables
     public function icsActivity()
     {
         $first = array_rand($this->alphabet_reverse(), 3);
-        dd($first);
+        return implode('', $first);
     }
 
     public function icsNNE($icsKey, $activity, $country)
