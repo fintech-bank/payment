@@ -26,8 +26,7 @@ class Generator extends Tables
         $uc_country = '';
 
         foreach (Str::ucsplit($activity) as $char) {
-            dd($char);
-            $uc_activity .= array_search($char, $this->alphabet_reverse());
+            $uc_activity .= array_search($char, $this->alphabet());
         }
 
         foreach (Str::ucsplit($country) as $char) {
