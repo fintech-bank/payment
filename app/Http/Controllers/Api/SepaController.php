@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Service\Verify;
 use Faker\Factory;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,11 @@ class SepaController extends Controller
 
     public function remb(Request $request)
     {
-
+        $verify = new Verify();
+        if ($verify->verifyICS($request->ics)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
