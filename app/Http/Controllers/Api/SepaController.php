@@ -19,9 +19,9 @@ class SepaController extends Controller
     {
         $verify = new Verify();
         if($verify->verifyICS($request->get('ics')) == 5) {
-            return true;
+            return "true";
         } else {
-            return false;
+            return "false";
         }
     }
 }
