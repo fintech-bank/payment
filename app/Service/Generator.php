@@ -33,6 +33,6 @@ class Generator extends Tables
             $uc_country .= array_search($char, $this->alphabet());
         }
 
-        dd($uc_country, $uc_activity);
+        return Str::limit($uc_activity, 3, '') . Str::limit($uc_country, 3, '');
     }
 }
