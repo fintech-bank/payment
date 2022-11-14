@@ -51,6 +51,6 @@ class Generator extends Tables
         $act = $this->icsActivity();
         $nne = $this->icsNNE($key, $act, $c);
 
-        dd($c, $key, $act, $nne);
+        return $c.$key.$act.$nne;
     }
 }
